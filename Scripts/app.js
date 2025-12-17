@@ -1,9 +1,12 @@
 let usersearchEL = document.getElementById("usersearch")
 let weatherDesc = document.getElementById("weatherDesc")
+let currentTemp = document.getElementById("currentTemp")
 let  latitude;
 let longitude;
 let cityTXT = document.getElementById("cityTXT")
-//const API_KEY = 
+let weatherIMG = document.getElementById("weatherIMG")
+let weatherID;
+const API_KEY = "28e85bb6fceef87b8575ae0f8d203149";
 
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
@@ -11,6 +14,7 @@ if ("geolocation" in navigator) {
   // Geolocation is not available
   alert("Geolocation is not supported by this browser.");
 }
+
 
 
 function successCallback(position) {
@@ -28,14 +32,17 @@ function successCallback(position) {
   fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
     .then(response => response.json())
     .then(data => {
-      const weatherString = data.list[0].weather[0].description;
+      const kel = data.list[0].main.temp;
+      const weatherString = data.list[0].weather[0].main;
+      weatherID = data.list[0].weather[0].id;
       console.log(weatherString);
       weatherDesc.textContent = weatherString;
-    });
+      currentTemp.textContent = (kel - 273.15) * 9/5 + 32
+    });    
+    IMGchange()
 }
 
-
-
+//-------------------------------------Catch the ERORR FOR GEOLOCATER HERE--------------------------------
 function errorCallback(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
@@ -53,6 +60,7 @@ function errorCallback(error) {
   }
 }
 
+//-----------------------------------FRAMEWORK FOR YOU SEARCH ENGINE HERE------------------------------------------
 const apiCall = () => { //very basic search engine
   let usersearch = document.getElementById("usersearch").value; // get value when called
 
@@ -70,8 +78,26 @@ const apiCall = () => { //very basic search engine
     .then(data => { console.log(data); });
 };
 
+
+
+
 usersearchEL.addEventListener('keydown', (event) => {
   if (event.key === "Enter") {
     apiCall();
   }
 });
+//-------------------------------FUNCTION TO CHANGE IMG BASED ON OPENWEATHER API ID-----------------------------
+function IMGchange(){
+if (weatherID >= 300 && weatherID <= 531) {
+  weatherIMG.src = "../Rainy.png";
+}
+else if (weatherID >= 600 && weatherID <= 622) {
+  weatherIMG.src = "../Snow.png";
+}
+else if (weatherID = 800) {
+  weatherIMG.src = "../Sunny.png";
+}
+else if (weatherID >= 801 && weatherID <= 804) {
+  weatherIMG.src = "../Cloudy.png";
+}
+}

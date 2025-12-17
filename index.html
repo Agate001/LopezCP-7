@@ -10,48 +10,48 @@
   <link rel="stylesheet" href="Styles/style.css">
 </head>
 
-<body>
-  <!-- <input type="text" id="usersearch" placeholder="ex. Stockton CA US"> This is the basic search just swap this into where you want-->
+<body style="background-image: url('Background.jpg');"><!--style="background-image: url('Background.jpg');" -->
   <h1 class="text-center">Weather Tracker</h1>
   <div class="grid">
-    <h1 id="cityTXT" class="R1 text-center">Hawaii</h1>
-    <div class="imgR2 d-flex justify-content-center">
-    <img src="Rectangle 11 (1) 1.png" alt="">
+    <div class="grid2 G1 rounded-4">
+      <h1 id="cityTXT" class="R1 text-center">Hawaii</h1>
+      <div class="imgR2 d-flex justify-content-center">
+        <img id="weatherIMG" src="Cloudy.png" alt="">
+      </div>
+      <h1 id="currentTemp" class="R3 text-center">60</h1>
+      <h2 id="weatherDesc" class="R4 text-center">Cloudy</h2>
+      <h3 class="R5 text-center">Low 20</h3>
+      <h3 class="R5C4 text-center">High 60</h3>
+
+      <section class="R6 dayGrid text-center rounded-4 pt-3">
+        <div class="tue marg rounded-4">
+          <h5>Tue</h5>
+          <h2 class="dayFont">68</h2>
+        </div>
+
+        <div class="tue marg rounded-4">
+
+          <h5>wed</h5>
+          <h2 class="dayFont">72</h2>
+
+        </div>
+
+        <div class="tue marg rounded-4">
+          <h5>Thu</h5>
+          <h2 class="dayFont">70</h2>
+        </div>
+
+        <div class="tue marg rounded-4">
+          <h5>Fri</h5>
+          <h2 class="dayFont">75</h2>
+        </div>
+      </section>
     </div>
-    <h1 class="R3 text-center">60</h1>
-    <h2 id="weatherDesc" class="R4 text-center">Cloudy</h2>
-    <h3 class="R5 text-center">Low 20</h3>
-    <h3 class="R5 text-center">high 60</h3>
-
-    <section class="R6 dayGrid text-center">
-      <div class="tue">
-        <h5>Tue</h5>
-        <h2>68</h2>
-      </div>
-
-      <div class="wed">
-
-        <h5>wed</h5>
-        <h2>72</h2>
-
-      </div>
-
-      <div class="tue">
-        <h5>Thu</h5>
-        <h2>70</h2>
-      </div>
-
-      <div class="tue">
-        <h5>Fri</h5>
-        <h2>75</h2>
-      </div>
-    </section>
-    <div class="search">
-      <input type="text" id="usersearch" placeholder="ex. Stockton CA US" style="width: 100%;">
+    <div class="search ms-5">
+      <input class="rounded-5" type="text" id="usersearch" placeholder="ex. Stockton CA US" style="width: 90%; height: 77px;">
     </div>
 
   </div>
-
 
 
 

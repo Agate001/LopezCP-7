@@ -1,20 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Weather</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="Styles/style.css">
 </head>
-  <body>
- <input type="text" id="usersearch" placeholder="ex. Stockton CA US">
+
+<body>
+  <!-- <input type="text" id="usersearch" placeholder="ex. Stockton CA US"> This is the basic search just swap this into where you want-->
+  <h1 class="text-center">Weather Tracker</h1>
+  <div class="grid">
+    <h1 id="cityTXT" class="R1 text-center">Hawaii</h1>
+    <div class="imgR2 d-flex justify-content-center">
+    <img src="Rectangle 11 (1) 1.png" alt="">
+    </div>
+    <h1 class="R3 text-center">60</h1>
+    <h2 id="weatherDesc" class="R4 text-center">Cloudy</h2>
+    <h3 class="R5 text-center">Low 20</h3>
+    <h3 class="R5 text-center">high 60</h3>
+
+    <section class="R6 dayGrid text-center">
+      <div class="tue">
+        <h5>Tue</h5>
+        <h2>68</h2>
+      </div>
+
+      <div class="wed">
+
+        <h5>wed</h5>
+        <h2>72</h2>
+
+      </div>
+
+      <div class="tue">
+        <h5>Thu</h5>
+        <h2>70</h2>
+      </div>
+
+      <div class="tue">
+        <h5>Fri</h5>
+        <h2>75</h2>
+      </div>
+    </section>
+    <div class="search">
+      <input type="text" id="usersearch" placeholder="ex. Stockton CA US" style="width: 100%;">
+    </div>
+
+  </div>
 
 
 
 
 
 
-    <script type="module" src="Scripts/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
+
+  <script type="module" src="Scripts/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>

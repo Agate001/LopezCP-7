@@ -1,5 +1,9 @@
 let usersearchEL = document.getElementById("usersearch")
-
+let weatherDesc = document.getElementById("weatherDesc")
+let  latitude;
+let longitude;
+let cityTXT = document.getElementById("cityTXT")
+//const API_KEY = 
 
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
@@ -10,9 +14,24 @@ if ("geolocation" in navigator) {
 
 
 function successCallback(position) {
-  const latitude = position.coords.latitude;
-  const longitude = position.coords.longitude;
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
   console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+   fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=28e85bb6fceef87b8575ae0f8d203149`)
+    .then(response => response.json())
+    .then(data => {
+      const cit = data[0].name;
+      console.log(cityTXT);
+      cityTXT.textContent = cit
+    });
+
+  fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
+    .then(response => response.json())
+    .then(data => {
+      const weatherString = data.list[0].weather[0].description;
+      console.log(weatherString);
+      weatherDesc.textContent = weatherString;
+    });
 }
 
 
@@ -34,9 +53,6 @@ function errorCallback(error) {
   }
 }
 
-// http://api.openweathermap.org/geo/1.0/direct?q=Stockton,CA,US&limit=1&appid=09138befca0b554bfbc9e831ad391ef8
-
-
 const apiCall = () => { //very basic search engine
   let usersearch = document.getElementById("usersearch").value; // get value when called
 
@@ -49,7 +65,7 @@ const apiCall = () => { //very basic search engine
   console.log(state);
   console.log(country);
 
-  fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${country}&limit=1&appid=09138befca0b554bfbc9e831ad391ef8`)
+  fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${country}&limit=1&appid=${API_KEY}`)
     .then(response => response.json())
     .then(data => { console.log(data); });
 };

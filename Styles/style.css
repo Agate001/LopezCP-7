@@ -1,0 +1,45 @@
+    h1{font-size: 60px;}
+        .grid{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+    }
+    .dayGrid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+    .R1{
+        grid-column: span 2;
+    }
+    .imgR2{
+        grid-row: 2;
+        grid-column: span 2;
+    }
+    .R3{
+        grid-row: 3;
+        grid-column: span 2;
+    }
+    .R4{
+        grid-row: 4;
+        grid-column: span 2;
+    }
+    .R5{
+        grid-row: 5;
+    }
+    .R6{
+        grid-row: 6;
+        grid-column: span 2;
+    }
+
+    .tue{
+        columns: 1;
+    }   
+    .wed{
+   
+        grid-column: 2;
+    }
+    .search{
+        grid-column: 3 / 6;
+    }
+    

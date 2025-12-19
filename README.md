@@ -3,6 +3,7 @@ Peer Review 1: Jesus Salgado - comparing your site to the figma there are many d
 The Geolocation works very and the forcast works well but I would suggest making the favorites and the recent lookups as buttons that will recall the information.
 
 Decent job overall but there is plenty of room for improvement although your api is working very well no issues at all with that so good job on that. The only thing that needs work is the styling so that it looks more like the figma. 
+Peer Review 1:Looks great! I notice that it looks almost identical to your figma, so amazing work bro!
 
 
 Peer Review 2:

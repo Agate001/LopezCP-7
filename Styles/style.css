@@ -64,10 +64,44 @@ body{
         font-size: 45px;
     }
     .search{
+        grid-row: 1;
         grid-column: 3 / 6;
-        align-self: start;
     }
     .marg{
         margin-left: 5%;
         margin-bottom: 10px;
     }
+
+    .favorites{
+    grid-row: 1;
+    grid-column: 3/ span 2;
+    background-color: #FFFFFFB0;
+    margin-left: 8%;
+    margin-right: 26%;
+    margin-top: 17%;
+    }
+    .recents{
+    grid-row: 1;
+    grid-column: 4/ span 2;
+    background-color: #FFFFFFB0;
+    margin-left: 29%;
+    margin-right: 5%;
+    margin-top: 17%;
+    }
+    .saved {
+  display: flex;
+  align-items: center;
+
+  background-color: #3F383840;
+
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 10%;
+  padding-right: 0;
+
+  font-size: 35px;
+}
+.starBTN{
+    background-color: #FFFFFFA6;
+    border: 0;
+}

@@ -15,48 +15,56 @@
   <div class="grid">
     <div class="grid2 G1 rounded-4">
       <h1 id="cityTXT" class="R1 text-center">Hawaii</h1>
+      <button id="favoriteBtn" class="starBTN"><img src="Star.png" alt=""></button>
       <div class="imgR2 d-flex justify-content-center">
         <img id="weatherIMG" src="Cloudy.png" alt="">
       </div>
       <h1 id="currentTemp" class="R3 text-center">60</h1>
       <h2 id="weatherDesc" class="R4 text-center">Cloudy</h2>
-      <h3 class="R5 text-center">Low 20</h3>
-      <h3 class="R5C4 text-center">High 60</h3>
+      <h3 id="low" class="R5 text-center">Low 20</h3>
+      <h3 id="high" class="R5C4 text-center">High 60</h3>
 
-      <section class="R6 dayGrid text-center rounded-4 pt-3">
+      <section class="R6 dayGrid text-center rounded-4 py-3">
         <div class="tue marg rounded-4">
-          <h5>Tue</h5>
-          <h2 class="dayFont">68</h2>
+          <h5 id="d2TXT">Tue</h5>
+          <h2 id="d2" class="dayFont">68</h2>
         </div>
 
         <div class="tue marg rounded-4">
 
-          <h5>wed</h5>
-          <h2 class="dayFont">72</h2>
+          <h5 id="d3TXT">wed</h5>
+          <h2 id="d3" class="dayFont">72</h2>
 
         </div>
 
         <div class="tue marg rounded-4">
-          <h5>Thu</h5>
-          <h2 class="dayFont">70</h2>
+          <h5 id="d4TXT">Thu</h5>
+          <h2 id="d4" class="dayFont">70</h2>
         </div>
 
         <div class="tue marg rounded-4">
-          <h5>Fri</h5>
-          <h2 class="dayFont">75</h2>
+          <h5 id="d5TXT">Fri</h5>
+          <h2 id="d5" class="dayFont">75</h2>
         </div>
       </section>
     </div>
     <div class="search ms-5">
-      <input class="rounded-5" type="text" id="usersearch" placeholder="ex. Stockton CA US" style="width: 90%; height: 77px;">
+      <input class="rounded-5" type="text" id="usersearch" placeholder="ex. Stockton CA US" style="width: 97%; height: 77px;">
     </div>
 
+    <div class="favorites text-center rounded-4">
+      <h1 style="font-size: 30px;">Favorites</h1>
+      <div id="favLocation">
+        <button class="saved rounded-5">90° Texas
+          <img src="Star1.png" alt="" style=" padding-left: 15%;" >
+        </button>
+      </div>
+    </div>
+    <div class="recents text-center rounded-4">
+      <h1 style="font-size: 30px;">Recents</h1>
+    </div>
   </div>
-
-
-
-
-
+    
 
   <script type="module" src="Scripts/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

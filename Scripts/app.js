@@ -28,8 +28,8 @@ let recentBox = document.querySelector(".recents");
 
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 let recents = JSON.parse(localStorage.getItem("recents")) || [];
-
-const API_KEY = "28e85bb6fceef87b8575ae0f8d203149";
+//--------------------------------------------------------------------------KEY HERE
+const API_KEY = "";
 const placeholder = "ex. Stockton CA US";
 
 /* make sure button behaves like a normal button */

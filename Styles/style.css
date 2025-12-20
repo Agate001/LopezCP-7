@@ -1,7 +1,21 @@
-body{
-    background-repeat: no-repeat;   
-    object-fit: cover;
-    background-size: 100%;
+@font-face {
+  font-family: "Inter";
+  src: url("../Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Inter", sans-serif;
+}
+button{
+    border: 0;
+}
+input{
+    border: 0;
+    background-color: #FFFFFFA6;
 }
    h1{font-size: 60px;}
         
@@ -66,6 +80,7 @@ body{
     .search{
         grid-row: 1;
         grid-column: 3 / 6;
+        
     }
     .marg{
         margin-left: 5%;
@@ -79,6 +94,7 @@ body{
     margin-left: 8%;
     margin-right: 26%;
     margin-top: 17%;
+    
     }
     .recents{
     grid-row: 1;
@@ -98,10 +114,33 @@ body{
   margin-right: 10%;
   padding-left: 10%;
   padding-right: 0;
+  margin-bottom: 5%;
+  font-size: 35px;
+}
+    .recSave {
+  display: flex;
+  align-items: center;
 
+  background-color: #3F383840;
+
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 10%;
+  padding-right: 15%;
+  margin-bottom: 5%;
   font-size: 35px;
 }
 .starBTN{
-    background-color: #FFFFFFA6;
+    background-color: #ffffff00;
     border: 0;
+}
+.userinput{
+    background-image: url("../Searchicon.png");
+    background-position: 1%;
+    background-repeat: no-repeat;
+    width: 97%; 
+    height: 77px;
+    padding-left: 7%;
+    font-size: 24px;
+
 }

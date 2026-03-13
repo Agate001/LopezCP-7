@@ -27,7 +27,7 @@ let recView = document.getElementById("recView");
 let latitude;
 let longitude;
 //====================================================KEY HERE======================================
-const API_KEY = "";
+const API_KEY = "28e85bb6fceef87b8575ae0f8d203149";
 const placeholder = "ex. Stockton CA US";
 
 favoriteBtn.type = "button";
